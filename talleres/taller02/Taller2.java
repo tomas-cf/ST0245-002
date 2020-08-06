@@ -59,13 +59,18 @@ public class Taller2 {
 	* @return verdadero si hay un subconjunto el cual su suma = target
 	*/
 	private static boolean SumaGrupo(int start, int[] nums, int target) {
-		if(start == nums.length) return false;
-                if(target==0){
-                    return true;
-                }else if(target != 0){
-                    return false;
-                }
-                return SumaGrupo(start+1,nums,target-nums[start]);
+            if (start >= nums.length) {
+                return (target == 0);
+            }
+  
+            if (SumaGrupo(start + 1, nums, target - nums[start])) {
+                return true;
+            }    
+            if (SumaGrupo(start + 1, nums, target)) {
+                return true;
+            }
+            
+            return false;
 	}
 	
 	/**
@@ -93,12 +98,16 @@ public class Taller2 {
 	*/
 
 	private static void combinationsAux(String base, String s) {  
-            if(s.length()==0) System.out.println(" ");
+            if(s.length()==0) {
+                System.out.println(base);
+            }else{
+                combinationsAux(s.substring(0,1), s.substring(1));
+                combinationsAux(base, s.substring(1));
+            }
             
-            combinationsAux();
             
 	}
 
 }
     
-}
+
