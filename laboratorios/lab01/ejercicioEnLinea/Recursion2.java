@@ -48,7 +48,12 @@ public class Recursion2 {
         ECUACION DE RECURRENCIA:
             C4(2^n-1)+C1*2^n-1
         COMPLEJIDAD:
-            
+            O(C4(2^n - 1) + C1*2^(n-1))
+            O(C4(2^n) + C1*2^(n))        -> Por regla de la suma             (2 veces)
+            O(2^n + 2^n)                -> Por regla de la multiplicacion   (2 veces)
+            O(2*2^n)
+            O(2^n)                      -> Por regla de la multiplicacion
+    
         */
     }
     
@@ -63,7 +68,11 @@ public class Recursion2 {
         ECUACION DE RECURRENCIA:
             C4(2^n-1)+C1*2^n-1
         COMPLEJIDAD:
-        
+            O(C4(2^n - 1) + C1*2^(n-1))
+            O(C4(2^n) + C1*2^(n))        -> Por regla de la suma             (2 veces)
+            O(2^n + 2^n)                -> Por regla de la multiplicacion   (2 veces)
+            O(2*2^n)
+            O(2^n)                      -> Por regla de la multiplicacion
         */
     }
 
@@ -82,7 +91,11 @@ public class Recursion2 {
         ECUACION DE RECURRENCIA:
             C2(2^n-1)+C1*2^n-1
         COMPLEJIDAD:
-        
+            O(C2(2^n - 1) + C1*2^(n-1))
+            O(C2(2^n) + C1*2^(n))        -> Por regla de la suma             (2 veces)
+            O(2^n + 2^n)                 -> Por regla de la multiplicacion   (2 veces)
+            O(2*2^n)
+            O(2^n)                       -> Por regla de la multiplicacion
         */
     }
 
