@@ -27,9 +27,9 @@ public class Recursion1{
 
         return nestParen(str.charAt(0)+""+str.charAt(str.length()-1)) && 
                           nestParen(str.substring(1,str.length()-1));       //C4 + T(2) + T(n-2)
-        /*C3 + T(2) + T(n-2)==C3+C2+T(n-2)
+        /*C4 + T(2) + T(n-2)==C4+C2+T(n-2)
         ECUACION DE RECURRENCIA:
-        ((-1/4)C1*C2)((-1)^2n-2n)+C2(-1)^n+c1
+        ((-1/4)C1*C3)((-1)^2n-2n)+C2((-1)^n)+c1
         CALCULO DE COMPLEJIDAD:
         
         */
