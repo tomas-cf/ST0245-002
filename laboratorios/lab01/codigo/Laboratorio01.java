@@ -45,6 +45,12 @@ public class Laboratorio01 {
     public static int ways(int n){
         if(n<=2) return n;          //C1
         return ways(n-1)+ways(n-2); //C2+T(n-1)+T(n-2)
+        /*
+        ECUACION DE RECURRENCIA:
+            -C2+C1*Fn+C2*Ln
+        CALCULO DE COMPLEJIDAD:
+            O(2^n)
+        */
     }
     
 }
