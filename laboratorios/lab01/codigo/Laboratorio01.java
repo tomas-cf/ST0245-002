@@ -34,7 +34,14 @@ public class Laboratorio01 {
        
         return Math.max(lcsDNAAux(string1.substring(0,m-1),string2,m-1,n) , 
                             lcsDNAAux(string1,string2.substring(0,n-1),m,n-1)); //T(m,n)= C4+T(m-1,n)+ T(m,n-1)
-    }
+         /*
+         ECUACION DE RECURRENCIA:
+            
+         CALCULO DE COMPLEJIDAD:
+                O(2^n+m)
+         */ 
+   }
+    
     /**
      * This method calculates how many ways there are for organizing rectangles
      * of 1x2 in a rectangle of 2xn
