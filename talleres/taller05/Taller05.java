@@ -23,8 +23,8 @@ public class Taller05 {
         for (int i = 0; i < array.length; i++) //C2+C3*n 
             suma+=array[i];         
         return suma;                           //C4
-                                               //T(n)=   C1+C4(C2+C3)*n
-                                               //T(n)=   n
+                                               //T(n)=   C1+C4+C2+C3*n
+                                               //T(n) es O(n)
     }
     
     
@@ -39,7 +39,7 @@ public class Taller05 {
         for (int i = 1; i <= num; i++) {                    //C1+C2n
             for (int j = 1; j <= num; j++) {                //(C3+C4n)*n
                 System.out.println(i+"x"+j+" = "+(i*j) );   //C5+n*n
-            }                                               //n^2
+            }                                               //T(n) es O(n^2)
         }                                                   
     }
     
@@ -63,7 +63,7 @@ public class Taller05 {
             }
         }
         return array;                                       //C9+n^2
-    }                                                       // n^2
+    }                                                       //T(n) es O(n^2)
 }
     
 
