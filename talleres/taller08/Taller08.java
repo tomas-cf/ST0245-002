@@ -59,10 +59,10 @@ public class Taller08 {
     */
     public  static  void  asignarSolicitudes   (LinkedList<Nevera> almacen , LinkedList<Solicitud> solicitudes ) { //O(m*n)
         String salida ="[";
-        int sizeAux= almacen.size();
-        for (int i =0; i <solicitudes.size(); i++) { // O(m*n)
-            salida+= "('"+solicitudes.get(i).empresa+"',[";
-            int neveras= solicitudes.get(i).cantidad;
+        int sizeAux= solicitudes.size();
+        for (int i =0; i <sizeAux; i++) { // O(m*n)
+            salida+= "('"+solicitudes.getFirst().empresa+"',[";
+            int neveras= solicitudes.getFirst().cantidad;
             if (neveras>almacen.size()) {
                 neveras=almacen.size();
             }
@@ -74,6 +74,7 @@ public class Taller08 {
                 almacen.removeFirst();
             }
             salida+="]),";
+            solicitudes.removeFirst();
         }
 
         salida =salida.substring(0,salida.length()-1)+"]";
@@ -133,7 +134,7 @@ public class Taller08 {
         
         //Punto 2 (Las neveras xd)
        
-       /*LinkedList<Nevera> almacen = new LinkedList<Nevera>();
+       LinkedList<Nevera> almacen = new LinkedList<Nevera>();
        LinkedList<Solicitud> solicitudes = new LinkedList<Solicitud>();
        //Neveras del alamacen
        almacen.add(new Nevera(9,"ibm"));
