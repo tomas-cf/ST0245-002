@@ -5,16 +5,12 @@
  */
 package taller10;
 /**
- *
- * @author NN
- */
-/**
 * La clase BinaryTree intenta dar un conocimiento a los
 * estudiantes acerca del manejo de un arbol binario de enteros.  
 * Aquí se espera crear una estrcutura concreta del árbol binario,
 * cabe aclarar que esta estrucutra ya esta implementada.
 * @see <a href="https://docs.oracle.com/javase/9/docs/api/jdk/nashorn/api/tree/BinaryTree.html"> Árbol Binario</a>
-* @author Mauricio Toro, Andres Paez
+* @author NN
 *
 */
 
