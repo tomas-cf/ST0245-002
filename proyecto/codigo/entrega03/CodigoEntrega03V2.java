@@ -16,43 +16,11 @@ public class CodigoEntrega03V2 {
      */
     public static void main(String[] args) {
         
-        /*String [][]testing_data = {
-            {"Green", "3", "10", "20",  "Apple"},
-            {"Yellow", "3","10", "25","Banana"},
-            {"Purple", "3","10", "20","Apple"},
-            {"Orange", "3","10", "30","Orange"},
-            {"Yellow", "3","30", "50","Pineapple"},
-            {"Yellow", "3","30", "30","Tangerine"},
-            {"Red", "1", "20", "5", "Grape"},
-        };*/
-        
-        //String [] header = {"color", "diameter","price","weight" , "label"};
-        
-        Arbol prueba = new Arbol();
-        
-        /*Nodo root = prueba.build_tree(data);
-        
-        System.out.println(Question.getValue(root.question));
-        System.out.println(Question.getValue(root.falseBranch.question));
-        System.out.println("#####################");
-        //System.out.println(root.rows);
-        
-        prueba.printTree(root);
-        
-        System.out.println("#####################");
-        
-        String k = prueba.classify(apple3, root);
-        System.out.println(k);
-        */
-        
-        //System.out.println(Question.getValue(root.trueBranch.question));
-        
-        //ArrayList sali = prueba.find_best_split(data);
-        //System.out.println(sali.get(0));
-        //System.out.println(Question.getValue((Question)sali.get(1)));
-        //System.out.println((Question)sali.get(1));
 
-        //Nodo tree = Arbol.buildTree(testing_data);
+        
+        //Arbol prueba = new Arbol();
+        
+
        
         try {
             LeerDatos training_data = new LeerDatos();
