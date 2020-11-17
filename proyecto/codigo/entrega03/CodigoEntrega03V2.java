@@ -18,39 +18,41 @@ public class CodigoEntrega03V2 {
         
 
         
-        //Arbol prueba = new Arbol();
-        
-
+        /*
+            Nombres de los dataset:
+            
+            lite.csv
+            0_train_balanced_15000.csv
+            4_test_balanced_45000.csv
+            2_train_balanced_75000.csv
+            3_train_balanced_105000.csv
+            4_train_balanced_135000.csv
+            0_test_balanced_5000.csv
+            1_train_balanced_45000.csv
+        */
        
         try {
             LeerDatos training_data = new LeerDatos();
-            //datos.leer("lite.csv" );
-            training_data.leer("0_train_balanced_15000.csv");
-            for (int i = 0; i < training_data.estudiantes.get(0).size(); i++) {
-              //  System.out.println(LeerDatos.estudiantes.get(0).get(i));
-            }
-            //System.out.println(LeerDatos.estudiantes.get(5).size());
-            //System.out.println(LeerDatos.estudiantes.get(4).get(35));
+            training_data.leer("0_test_balanced_5000.csv");
+
             
-            //Nodo root = new Nodo(datos.getStudiantes())
             Arbol arbolito = new Arbol();
-            //ArrayList ensayo = arbolito.find_best_split(LeerDatos.estudiantes);
-            //System.out.println("Gini : "+ensayo.get(0));
-            //System.out.println("Pregunta: "+Question.getValue((Question)ensayo.get(1)));
+            
             
             Nodo root = arbolito.build_tree(training_data.estudiantes);
             
             LeerDatos test_data = new LeerDatos();
-            test_data .leer("0_train_balanced_15000.csv"); //"4_test_balanced_45000.csv" || 0_train_balanced_15000.csv
-            //ArrayList ensayo = new ArrayList();
-            //ArrayList ensayo2 = new ArrayList();
+            
+            
+            test_data .leer("4_test_balanced_45000.csv"); 
+            
             int cont = 0;
             double contAciertos=0;
             double cont1=0;
             double cont1Esperados=0;
-            for (ArrayList<String> train : test_data.estudiantes) {
-                String exito = (String)train.get(train.size()-1);
-                double probExito = arbolito.classify(train, root);
+            for (ArrayList<String> stud : test_data.estudiantes) {
+                String exito = (String)stud.get(stud.size()-1);
+                double probExito = arbolito.classify(stud, root);
                 String prediccion="0";
                 if (probExito>50) {
                     prediccion="1";
@@ -75,6 +77,7 @@ public class CodigoEntrega03V2 {
             //double probExito = arbolito.classify(test_data.estudiantes.get(4999), root);
             //System.out.println(test_data.estudiantes.get(4999).get(33));
             //System.out.println(probExito);
+            
         } catch (Exception e) {
             System.out.println(e);
         }
