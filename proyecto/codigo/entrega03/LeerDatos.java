@@ -25,7 +25,8 @@ public class LeerDatos {
     /**
      * Metodo para obtener el dataset .csv tanto el train como el test
      * Los datos los guarda en el atributo de clase "estudiantes"
-     * @param String con el nombre del archivo del dataset
+     * @param nombreArchivo con el nombre del archivo del dataset
+     * @throws IOException error si no se encuentra el archivo
      */
     public void leer(String nombreArchivo) throws IOException, Exception {
         //Archivo que se va leer

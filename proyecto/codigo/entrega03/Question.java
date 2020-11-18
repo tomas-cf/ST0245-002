@@ -16,8 +16,8 @@ public class Question {
     
     /**
      * Metodo para crear una nueva posible pregunta
-     * @param int column que corresponde a la columna que le corresponde la pregunta
-     * @param  String value que corresponde a la pregunta con que se va comparar
+     * @param column que corresponde a la columna que le corresponde la pregunta
+     * @param  value que corresponde a la pregunta con que se va comparar
      */
     public Question(int column ,String value) {
         this.value = value;
@@ -26,7 +26,7 @@ public class Question {
     
     /**
      * Metodo que sirve para retornar el valor con que compara la pregunta
-     * @param Question question que corresponde a la pregunta a la cual se le quiere saber el value
+     * @param questions que corresponde a la pregunta a la cual se le quiere saber el value
      * @return valor con que compara la pregunta
      */
     public static String getValue(Question questions){
@@ -35,7 +35,7 @@ public class Question {
     
     /**
      * Metodo que sirve para retornar el la columna a la que corresponde la pregunta
-     * @param Question question que corresponde a la pregunta a la cual se le quiere saber su correspondiente columna
+     * @param question que corresponde a la pregunta a la cual se le quiere saber su correspondiente columna
      * @return la columna a la que corresponde la pregunta
      */
     public static int getColmn(Question question){
@@ -44,7 +44,7 @@ public class Question {
     
     /**
      * Metodo que sirve para verificar si un String es numerico o no
-     * @param String str que corersponde a el String que se quiere saber si es numerico o no
+     * @param str que corersponde a el String que se quiere saber si es numerico o no
      * @return si es numerico o no (boolean)
      */
     public boolean isNumeric(String str){
@@ -58,8 +58,8 @@ public class Question {
     
     /**
      * Metodo que sirve para comparar la pregunta guardada con el valor correspondiente a la columna del estudiante que le llega 
-     * @param ArrayList<String> pTemp que corresponde a el estudiante con que se quiere validar
-     * @return si el valor de la columna del estudiante es >= o == con la de la pregunta
+     * @param pTemp que corresponde a el estudiante con que se quiere validar
+     * @return un booleano con su respectivo valor según el estudiante
      */
     public boolean match(ArrayList<String> pTemp){
         

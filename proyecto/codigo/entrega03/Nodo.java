@@ -16,8 +16,8 @@ public class Nodo {
         
         /**
         * Metodo que sirve para crear un nodo sin hijos y sin pregunta
-        * @param Question question que corresponde a la pregunta que le corresponde al nodo (Puede ser nula)
-        * @param  ArrayList<ArrayList<String>> que corresponde a los estudiantes del dataset train que quedaron allí
+        * @param question que corresponde a la pregunta que le corresponde al nodo (Puede ser nula)
+        * @param  rows que corresponde a los estudiantes del dataset train que quedaron allí
         */
         public Nodo (Question question, ArrayList<ArrayList<String>> rows){
 		this.question = question;
@@ -29,10 +29,10 @@ public class Nodo {
         
         /**
         * Metodo que sirve para crear un nodo con hijos y con pregunta
-        * @param Question question que corresponde a la pregunta que le corresponde al nodo (Puede ser nula)
-        * @param  Nodo trueBranch que corresponde a los estudiantes a los cuales la pregunta es correcta
-        * @param  Nodo falseBranch que corresponde a los estudiantes a los cuales la pregunta es incorrecta
-        * @param  ArrayList<ArrayList<String>> que corresponde a las columnas del dataset train que quedaron allí
+        * @param question que corresponde a la pregunta que le corresponde al nodo (Puede ser nula)
+        * @param  trueBranch que corresponde a los estudiantes a los cuales la pregunta es correcta
+        * @param  falseBranch que corresponde a los estudiantes a los cuales la pregunta es incorrecta
+        * @param  rows que corresponde a las columnas del dataset train que quedaron allí
         */
         public Nodo (Question question, Nodo trueBranch, Nodo falseBranch, ArrayList<ArrayList<String>>  rows){
 		this.question = question;

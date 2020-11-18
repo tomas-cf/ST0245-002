@@ -16,7 +16,7 @@ public class Gini {
     }
     /**
         * Metodo que sirve para calcular el gini de un nodo
-        * @param ArrayList<ArrayList<String>> que corresponde a los estudiantes que tiene cada nodo
+        * @param rows que corresponde a los estudiantes que tiene cada nodo
         * @return el gini que tiene el nodo
     */
     public static double calculoGini(ArrayList<ArrayList<String>> rows){
@@ -43,10 +43,10 @@ public class Gini {
     
      /**
         * Metodo que sirve para calcular el gini ponderado de una division de un nodo
-        * @param double giniDer que corresponde a el gini del nodo de los estudiantes a los cuales la pregunta es incorrecta
-        * @param double contNo que corresponde a la contidad de estudiantes a los cuales la pregunta es incorrecta
-        * @param double giniIz que corresponde a el gini del nodo de los estudianes a los cuales la pregunta es correcta
-        * @param double contYes que corresponde a la contidad de estudiantes a los cuales la pregunta es correcta
+        * @param giniDer que corresponde a el gini del nodo de los estudiantes a los cuales la pregunta es incorrecta
+        * @param contNo que corresponde a la contidad de estudiantes a los cuales la pregunta es incorrecta
+        * @param giniIz que corresponde a el gini del nodo de los estudianes a los cuales la pregunta es correcta
+        * @param contYes que corresponde a la contidad de estudiantes a los cuales la pregunta es correcta
         * @return el gini ponderado que tiene la división del nodo
     */
     public static double calculoGiniPond( double giniDer, double contNo, double giniIz, double contYes){

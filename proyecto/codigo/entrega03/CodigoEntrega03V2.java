@@ -33,7 +33,7 @@ public class CodigoEntrega03V2 {
        
         try {
             LeerDatos training_data = new LeerDatos();
-            training_data.leer("0_test_balanced_5000.csv");
+            training_data.leer("4_test_balanced_45000.csv");
 
             
             Arbol arbolito = new Arbol();
@@ -44,7 +44,7 @@ public class CodigoEntrega03V2 {
             LeerDatos test_data = new LeerDatos();
             
             
-            test_data .leer("4_test_balanced_45000.csv"); 
+            test_data .leer("0_train_balanced_15000.csv"); 
             
             int cont = 0;
             double contAciertos=0;
@@ -54,6 +54,7 @@ public class CodigoEntrega03V2 {
                 String exito = (String)stud.get(stud.size()-1);
                 double probExito = arbolito.classify(stud, root);
                 String prediccion="0";
+                //System.out.println(probExito);
                 if (probExito>50) {
                     prediccion="1";
                 }
@@ -72,6 +73,7 @@ public class CodigoEntrega03V2 {
             }
             //arbolito.printTree(root);
             System.out.println("Exactitud : "+(contAciertos/test_data.estudiantes.size()));
+            System.out.println(contAciertos);
             System.out.println("Presición : "+(cont1/contAciertos));
             System.out.println("Sensibilidad : "+(cont1/cont1Esperados));
             //double probExito = arbolito.classify(test_data.estudiantes.get(4999), root);
