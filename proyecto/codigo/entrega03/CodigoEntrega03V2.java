@@ -49,6 +49,7 @@ public class CodigoEntrega03V2 {
             int cont = 0;
             double contAciertos=0;
             double cont1=0;
+            double contExitosos=0;
             double cont1Esperados=0;
             for (ArrayList<String> stud : test_data.estudiantes) {
                 String exito = (String)stud.get(stud.size()-1);
@@ -64,17 +65,22 @@ public class CodigoEntrega03V2 {
                     if (prediccion.equals("1")) {
                         cont1++;
                     }
+                    
                 }
                 if (prediccion.equals("1")) {
                     cont1Esperados++;
                 }
+                if (exito.equals("1")) {
+                   contExitosos++;
+                }
+                
                 //System.out.println("Exito del est "+cont+" : " +exito+ " Predicción : "+prediccion);
                 cont++;
             }
             //arbolito.printTree(root);
             System.out.println("Exactitud : "+(contAciertos/test_data.estudiantes.size()));
-            System.out.println(contAciertos);
-            System.out.println("Presición : "+(cont1/contAciertos));
+            //System.out.println(contAciertos);
+            System.out.println("Presición : "+(cont1/contExitosos));
             System.out.println("Sensibilidad : "+(cont1/cont1Esperados));
             //double probExito = arbolito.classify(test_data.estudiantes.get(4999), root);
             //System.out.println(test_data.estudiantes.get(4999).get(33));

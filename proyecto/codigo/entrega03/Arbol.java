@@ -36,7 +36,7 @@ public class Arbol {
        
         //ArrayList<ArrayList<String>> falseBranch = trueAndFalseRows.get(0);
        
-         if  ((double)giniQuestion.get(0) == 0){
+         if  ( (double)giniQuestion.get(0) == 0){
             Nodo hoja = new Nodo((Question)giniQuestion.get(1),new Nodo(null,trueAndFalseRows.get(1)), new Nodo(null,trueAndFalseRows.get(0)),rows);
             return hoja;
         }
